@@ -35,14 +35,15 @@ def factorial(n):
 
 def fibonacci(n):
     """Return the nth number in the fibonacci sequence (starting at 0)."""
+    x = [0, 1, 1]
     if n < 3:
-        return n - 1
+        return x[n]
     else:
         second_to_last = 0
         last = 1
         result = 1
 
-        for _ in range(2, n):
+        for _ in range(2, n+1):
             result = second_to_last + last
             second_to_last, last = last, result
 
